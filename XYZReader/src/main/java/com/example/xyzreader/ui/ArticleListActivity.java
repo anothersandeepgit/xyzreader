@@ -99,21 +99,23 @@ public class ArticleListActivity extends AppCompatActivity implements
         }
     };
 
-    static boolean updateStart = false;
+    //static boolean updateStart = false;
     private void updateRefreshingUI() {
         mSwipeRefreshLayout.setRefreshing(mIsRefreshing);
 
         //Creating a snackbar object
         Snackbar snackbar;
         String snackBarTextBegin = "Update ";
-        String snackBarTextEnd = updateStart ? "started" : "finished";
+
+        String snackBarTextEnd = mIsRefreshing ? "started" : "finished";
 
         //Initializing snackbar using Snacbar.make() method
         snackbar = Snackbar.make(coordinatorLayout,snackBarTextBegin + snackBarTextEnd,Snackbar.LENGTH_LONG);
         //Displaying the snackbar using the show method()
+
         snackbar.show();
 
-        updateStart = !updateStart;
+        //updateStart = !updateStart;
     }
 
     @Override
