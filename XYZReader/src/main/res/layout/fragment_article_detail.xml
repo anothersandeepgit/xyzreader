@@ -25,14 +25,14 @@
                 <ImageView
                     android:transitionName="@string/transition_photo"
                     android:id="@+id/photo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/content_boundary"
                     android:src="@drawable/loading_indicator"
                     />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="@dimen/content_boundary"
                     android:background="@drawable/photo_background_protection" />
 
             </FrameLayout>
@@ -45,9 +45,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="@dimen/detail_card_max_width"
-                android:background="#fff"
-                android:elevation="2dp"
-                android:layout_marginTop="112dp" >
+                android:background="@color/detailbgcolor"
+                android:elevation="@dimen/content_elevation"
+                android:layout_marginTop="@dimen/content_boundary" >
 
                 <ImageView
                     android:id="@+id/body_photo"
@@ -59,7 +59,7 @@
                     android:id="@+id/meta_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#333"
+                    android:background="@color/headingbgcolor"
                     android:layout_gravity="bottom"
                     android:orientation="vertical"
                     android:paddingLeft="@dimen/detail_inner_horiz_margin"
@@ -75,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
                         android:fontFamily="sans-serif-condensed"
-                        android:textColor="#fff"
+                        android:textColor="@color/detail_title_text_color"
                         style="@android:style/TextAppearance.Material.Headline"
 
                         android:lineSpacingMultiplier="0.9" />
@@ -85,7 +85,7 @@
                         style="@android:style/TextAppearance.Material.Subhead"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#8fff" />
+                        android:textColor="@color/detail_article_text_color" />
                 </LinearLayout>
 
                 <TextView
@@ -96,9 +96,7 @@
                     android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
                     android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
-
                     android:textColorLink="@color/theme_accent"
-
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
 
         </com.example.xyzreader.ui.MaxWidthLinearLayout>
@@ -112,14 +110,14 @@
         android:layout_height="wrap_content"
         android:background="@drawable/add_fab_background"
         android:src="@drawable/ic_share"
-        app:borderWidth="0dp"
-        app:elevation="6dp"
+        app:borderWidth="@dimen/fab_border_width"
+        app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
         app:layout_anchorGravity="bottom|end"
         app:layout_anchor="@id/swipe_refresh_layout"
-        app:pressedTranslationZ="12dp"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
         android:clickable="true"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/fab_margin"
         android:layout_gravity="bottom|end"/>
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>

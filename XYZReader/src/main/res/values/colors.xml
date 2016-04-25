@@ -22,4 +22,9 @@
     <color name="theme_primary_dark">#303F9F</color>
     <color name="theme_accent">#FF4081</color>
     <color name="ltgray">#ffe0e0e0</color>
+    <color name="darkgray">#6000</color>
+    <color name="detailbgcolor">#fff</color>
+    <color name="detail_title_text_color">#fff</color>
+    <color name="detail_article_text_color">#8fff</color>
+    <color name="headingbgcolor">#333</color>
 </resources>
